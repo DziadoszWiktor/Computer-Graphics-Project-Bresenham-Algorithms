@@ -4,6 +4,7 @@ plt.xlabel("X")
 plt.ylabel("Y")
 
 def generate_bresenham_circle(x0, y0, radius):
+  # P0(x0, y0) radius = promień
   x = radius
   y = 0
   err = 0
@@ -11,6 +12,7 @@ def generate_bresenham_circle(x0, y0, radius):
   points = []
 
   while x >= y:
+    # 8 punktów okręgu (ośmiokrotna symetria)
     points.append((x0 + x, y0 + y))
     points.append((x0 + y, y0 + x))
     points.append((x0 - y, y0 + x))
