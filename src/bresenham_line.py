@@ -37,10 +37,11 @@ def generate_bresenham_line(x1, y1, x2, y2):
         ycoordinates.append(y)
 
     plt.plot(xcoordinates, ycoordinates)
+    plt.grid(True)
     plt.show()
 
 def main():
-    generate_bresenham_line(10, 10, 20, 20)
+    generate_bresenham_line(1, 1, 2, 2)
 
 if __name__ == "__main__":
     main()

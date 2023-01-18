@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 
+plt.xlabel("X")
+plt.ylabel("Y")
+
 def generate_bresenham_circle(x0, y0, radius):
   x = radius
   y = 0
@@ -28,15 +31,15 @@ def generate_bresenham_circle(x0, y0, radius):
   return points
 
 def main():
-    points = generate_bresenham_circle(50, 50, 30)
+    points = generate_bresenham_circle(0, 0, 20)
 
     # plot the points
     plt.scatter([x for x, y in points], [y for x, y in points])
 
     # reference circle
-    circle = plt.Circle((50, 50), 30, fill=False)
+    circle = plt.Circle((0, 0), 20, fill=False)
     plt.gcf().gca().add_artist(circle)
-
+    plt.grid(True)
     plt.show()
 
 if __name__ == "__main__":
